@@ -26,10 +26,10 @@ int main(void)
 	{
 	    head();
 	    printf("\t\t\t"ANSI_COLOR_CYAN"Select your choice"ANSI_COLOR_RESET"\n"
-	                     "\t\t"ANSI_COLOR_GREEN"[1]"ANSI_COLOR_RESET" BruteForce Attack (no passlist)\n"
-	                     "\t\t"ANSI_COLOR_GREEN"[2]"ANSI_COLOR_RESET" Dictionary Attack (need passlist)\n"
-	                     "\t\t"ANSI_COLOR_GREEN"[3]"ANSI_COLOR_RESET" EvilTwin Attack (Advance)\n"
-	                     "\t\t"ANSI_COLOR_GREEN"[0]"ANSI_COLOR_RESET" Exit\n\n"
+	                     "\t\t"ANSI_COLOR_GREEN"[1]"ANSI_COLOR_RESET ANSI_COLOR_RED" BruteForce Attack (no passlist)"ANSI_COLOR_RESET"\n"
+	                     "\t\t"ANSI_COLOR_GREEN"[2]"ANSI_COLOR_RESET ANSI_COLOR_RED" Dictionary Attack (need passlist)"ANSI_COLOR_RESET"\n"
+	                     "\t\t"ANSI_COLOR_GREEN"[3]"ANSI_COLOR_RESET ANSI_COLOR_RED" EvilTwin Attack (Advance)"ANSI_COLOR_RESET"\n"
+	                     "\t\t"ANSI_COLOR_GREEN"[0]"ANSI_COLOR_RESET ANSI_COLOR_RED" Exit"ANSI_COLOR_RESET"\n\n"
 	                     "\t\t"ANSI_COLOR_YELLOW"Endic3 > "ANSI_COLOR_RESET); scanf("%d",&select);
 	                     
 	    if (select == 1) brute();
@@ -38,6 +38,7 @@ int main(void)
 	    else {printf("\t\t"ANSI_COLOR_RED"Ending.........../"ANSI_COLOR_RESET"\n"); select = 0;}
 	                     
 	 }while(select != 0);
+	 return 0;
 }
 
 
@@ -73,7 +74,7 @@ void brute(void)
 	//input brute request
 	system("clear");
 	head();
-	printf("\t\t"ANSI_COLOR_CYAN"Bruteforce Attack"ANSI_COLOR_RESET"\n");
+	printf("\t\t\t"ANSI_COLOR_CYAN"Bruteforce Attack"ANSI_COLOR_RESET"\n");
 	printf("\t\t"ANSI_COLOR_GREEN"[ ! ]"ANSI_COLOR_RESET" Enter Path of Handshake file\n");
 	printf("\t"ANSI_COLOR_PURPLE"[Ex. /root/Desktop/wifi.cap] : "ANSI_COLOR_RESET);scanf("%s",&path[0]);
 	printf("\t\t"ANSI_COLOR_GREEN"[ ! ]"ANSI_COLOR_RESET" Enter BSSID : ");scanf("%s",&bssid[0]);
@@ -131,7 +132,7 @@ void dict(void)
 	//input dict request
 	system("clear");
 	head();
-	printf("\t\t"ANSI_COLOR_CYAN"Bruteforce Attack"ANSI_COLOR_RESET"\n");
+	printf("\t\t\t"ANSI_COLOR_CYAN"Dictionary Attack"ANSI_COLOR_RESET"\n");
 	printf("\t\t"ANSI_COLOR_GREEN"[ ! ]"ANSI_COLOR_RESET" Enter Path of Handshake file\n");
 	printf("\t"ANSI_COLOR_PURPLE"[Ex. /root/Desktop/wifi.cap] : "ANSI_COLOR_RESET);scanf("%s",&path[0]);
 	printf("\t\t"ANSI_COLOR_GREEN"[ ! ]"ANSI_COLOR_RESET" Enter BSSID : ");scanf("%s",&bssid[0]);
